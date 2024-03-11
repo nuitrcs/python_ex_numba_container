@@ -1,0 +1,11 @@
+# Output image files #
+######################
+*.png
+
+# Compiled source #
+###################
+*.o
+*.so
+._*
+
+
