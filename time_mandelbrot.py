@@ -17,6 +17,7 @@
 
 ## Import some stuff 
 import sys
+import os
 from timeit import default_timer as timer
 import numpy as np
 
@@ -111,10 +112,15 @@ print('Time third function call : ', end_3 - start_3)
 
 ## Save the image
 
+## get my home directory with os
+my_home = os.path.expanduser('~')
+
 fig, ax = plt.subplots()
 im = ax.imshow(image)
 ax.set_title('Mandelbrot fractal')
-plt.savefig('mandelbrot_plot.png', dpi = 200)
+
+print('Saving figure to your home directory.')
+plt.savefig(my_home + '/mandelbrot_plot.png', dpi = 200)
 
 
 
